@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapKit_CoreLocation_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5p3-lb-QVl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GQp-Zk-WuU"/>
+                                </connections>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="konum" translatesAutoresizingMaskIntoConstraints="NO" id="jYd-jL-ZQd">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="52S-cb-ntj"/>
+                                    <constraint firstAttribute="width" constant="40" id="VVZ-Gj-2Ae"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzC-bs-bkq">
+                                <rect key="frame" x="0.0" y="822" width="414" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nVn-Hj-hQE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWr-jv-7id">
+                                <rect key="frame" x="364" y="782" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.14576937100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Git">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGitTikla:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y03-Z3-UYZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5p3-lb-QVl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="72y-0h-5mo"/>
+                            <constraint firstItem="yzC-bs-bkq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NEV-0D-Yse"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SWr-jv-7id" secondAttribute="trailing" constant="20" id="OuT-Od-uyV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yzC-bs-bkq" secondAttribute="trailing" id="TF4-kq-JKA"/>
+                            <constraint firstItem="5p3-lb-QVl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V93-Vt-0uv"/>
+                            <constraint firstItem="yzC-bs-bkq" firstAttribute="top" secondItem="SWr-jv-7id" secondAttribute="bottom" constant="10" id="bu9-aR-FHH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yzC-bs-bkq" secondAttribute="bottom" id="cKn-L0-X3f"/>
+                            <constraint firstItem="jYd-jL-ZQd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jCc-Fi-utV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5p3-lb-QVl" secondAttribute="bottom" id="ovU-eD-h7J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5p3-lb-QVl" secondAttribute="trailing" id="pkc-jK-Ncx"/>
+                            <constraint firstItem="jYd-jL-ZQd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q10-tT-046"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnGit" destination="SWr-jv-7id" id="VvJ-p0-Tm7"/>
+                        <outlet property="lblAdres" destination="yzC-bs-bkq" id="THb-mI-WJu"/>
+                        <outlet property="mapView" destination="5p3-lb-QVl" id="hBP-tw-xgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="konum" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
